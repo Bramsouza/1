@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--TÍTULO-->
+		<title>Adivinhe a Palavra</title>
+		<!--BOOTSTRAP-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+		<!--LINK CSS-->
+		<link rel="stylesheet" type="text/css" href="game.css">
+	</head>
+<body>
+	<!--AULA 90 PARTE 2-->
+	<!--Usados para conter os nomes dos jogadores e a tag span para aatualizar a pontuação-->
+	<!--O id possivelmente seja do bootstrap-->
+	<h4 id="player1Name"></h4> <span id="player1Score"></span>
+	<br>
+	<h4 id="player2Name"></h4> <span id="player2Score"></span>
+
+	<div class="container">
+		<center>
+			<!--CABEÇALHO DA PÁGINA DO JOGO-->
+			<h2 style="color: white;">Adivinhe a Palavra!</h2>
+			<!--Nome do Jogador que faz a pergunta-->
+			<h3 id="playerQuestion"></h3>
+			<!--Nome do Jogador que responde a pergunta-->
+			<h3 id="playerAnswer"></h3>
+
+			<!-- na div o id será usado para atualizar esta div com a palavra, a caixa de entrada e o botão de seleção-->
+			<!--Lembrando que a grid é 12 e quando tem 6 ela está dividindo por 2, ou seja a tela fica a 50%-->
+			<div id="output" class="col-lg-6">    </div>
+			<br>
+			<br>
+			<label>Envie sua Palavra: <b style="color: red">Utilize uma palavra com 5 ou mais letras</b></label>
+			<!--id: se refere à caixa de entrada e obtém o valor dela.
+				form-control: adiciona preenchimento, margem e borda - BOOTSTRAP
+				placeHolder: DICA da caixa de texto.-->
+			<input type="text" id="word" class="form-control" placeholder="Palavra">
+			<br>
+			<!--No button a função send() pega a palavra e depois exibe no output-->
+			<button onclick="send()" class="btn btn-success" style="width: 30%;">Enviar</button>
+		</center>
+	</div>
+	<!--LINK HTML-->
+	<script src="game_page.js"></script>
+	<!--FINALIZAÇÃO DA AULA 90 PARTE 2-->
+</body>
+</html>
